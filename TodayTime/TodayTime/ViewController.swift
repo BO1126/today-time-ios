@@ -10,13 +10,16 @@ import UIKit
 class ViewController: UIViewController {
     
     var mTimer : Timer?
+    let dateFormatter = DateFormatter()
     
     @IBOutlet weak var nowTime : UILabel!
 
     override func viewDidLoad() {
+        let todayTime = Date()
+        dateFormatter.dateFormat = "HH : mm : ss"
         super.viewDidLoad()
+        nowTime.text = dateFormatter.string(from: todayTime)
         startTimer()
-        // Do any additional setup after loading the view.
     }
     
     func startTimer(){
