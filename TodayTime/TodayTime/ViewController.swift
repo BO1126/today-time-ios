@@ -34,9 +34,23 @@ class ViewController: UIViewController {
         let todayTime = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH : mm : ss"
+        makeCATransitionLabel(nowTime)
         nowTime.text = dateFormatter.string(from: todayTime)
-        }
-
+    }
+    
+    func makeCATransitionLabel(_ label: UILabel) {
+        let transition = CATransition()
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        transition.duration = 0.5
+        transition.type = .push
+        transition.subtype = .fromTop
+        nowTime.layer.add(transition, forKey: CATransitionType.push.rawValue)
+        
+    }
+    
+    @IBAction func touchUpStartNotificationButton(){
+        
+    }
 
 
 
