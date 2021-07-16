@@ -25,15 +25,15 @@ class ViewController: UIViewController {
     func startTimer(){
         if let timer = mTimer {
                     if !timer.isValid {
-                        mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+                        mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeCallback), userInfo: nil, repeats: true)
                     }
                 }else{
-                    mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+                    mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeCallback), userInfo: nil, repeats: true)
                 }
 
     }
     
-    @objc func timerCallback(){
+    @objc func timeCallback(){
         let todayTime = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH : mm : ss"
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     func makeCATransitionLabel(_ label: UILabel) {
         let transition = CATransition()
         transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        transition.duration = 0.5
+        transition.duration = 0.8
         transition.type = .push
         transition.subtype = .fromTop
         nowTime.layer.add(transition, forKey: CATransitionType.push.rawValue)

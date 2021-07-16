@@ -23,20 +23,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka7-g9-HTR">
-                                <rect key="frame" x="152.5" y="764" width="109" height="36"/>
+                                <rect key="frame" x="152.5" y="746" width="109" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="알림 시작하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 남은 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJz-Gi-5zs">
+                                <rect key="frame" x="139.5" y="303" width="135" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ka7-g9-HTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bxf-8E-N89"/>
+                            <constraint firstItem="WlT-Bg-XnL" firstAttribute="top" secondItem="aJz-Gi-5zs" secondAttribute="bottom" constant="80" id="Ppc-Cv-pXh"/>
                             <constraint firstItem="WlT-Bg-XnL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Suc-HW-TS8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ka7-g9-HTR" secondAttribute="bottom" constant="62" id="mc7-NJ-Bds"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ka7-g9-HTR" secondAttribute="bottom" constant="80" id="mc7-NJ-Bds"/>
                             <constraint firstItem="WlT-Bg-XnL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n2T-v8-RBi"/>
+                            <constraint firstItem="aJz-Gi-5zs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x6R-g4-DgE"/>
                         </constraints>
                     </view>
                     <connections>
