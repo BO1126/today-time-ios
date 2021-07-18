@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     var mTimer : Timer?
     let dateFormatter = DateFormatter()
     
@@ -19,6 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let todayTime = Date()
+        
         dateFormatter.dateFormat = "ss"
         let second = 60 - Int(dateFormatter.string(from: todayTime))!
         if second < 10 {
@@ -54,7 +54,6 @@ class ViewController: UIViewController {
                 }else{
                     mTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(secondCallback), userInfo: nil, repeats: true)
                 }
-
     }
     
     @objc func secondCallback(){
@@ -106,8 +105,4 @@ class ViewController: UIViewController {
     @IBAction func touchUpStartNotificationButton(){
         UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
     }
-
-
-
 }
-
